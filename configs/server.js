@@ -38,7 +38,7 @@ export const iniciarServidor = async () => {
     configureMiddlewares(app);
     configurarRutas(app);
     app.listen(port, () => {
-        console.log(`Server running on port ${port}`);
+        console.log(`Servidor corriendo en el puerto: ${port}`);
     });
 }
  
