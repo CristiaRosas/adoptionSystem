@@ -1,27 +1,26 @@
-import mongoose from "mongoose";
+import mongoose, { Types } from "mongoose";
 
 const UserSchema = mongoose.Schema({
     nombre: {
         type: String,
-        require: [true, 'El nombre es obligatorio']
+        required: [true, 'El nombre es obligatorio']
     },
     correo: {
         type: String,
-        require: [true, 'El correo es obligatorio'],
+        required: [true, 'El correo es obligatorio'],
         unique: true
     },
     password: {
         type: String,
-        require: [true, 'La contraseña es obligatorio']
-    }, 
+        required: [true, 'La contraseña es obligatoria']
+    },
     img: {
         type: String,
-
     },
     phone: {
         type: String,
-        minLegth: 8,
-        maxLegth: 8,
+        mainLength: 8,
+        maxLength: 8,
         required: true
     },
     role: {
@@ -38,10 +37,9 @@ const UserSchema = mongoose.Schema({
         default: false
     }
 });
-
-UserSchema.methods.toJSON = function(){
-    const {__v, password, _id, ...usuario} = this.toObject();
-    usuario.uid= _id;
+UserSchema.methods.toJSON = function() {
+    const { __v, password, _id, ...usuario } = this.toObject();
+    usuario.uid = _id;
     return usuario;
 }
 

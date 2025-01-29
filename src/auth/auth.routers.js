@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { check } from 'express-validator';
 import { login, register } from './auth.controller.js';
-import { valdarCampos } from '../middlewares/validar-campos.js';
+import { validarCampos } from '../middlewares/validar-campos.js';
 import { esRoleValido, existeEmail } from '../helpers/db-validator.js';
 
 const router = Router();
@@ -11,7 +11,7 @@ router.post(
     [
         check('correo', 'Este no es un correo valido').isEmail(),
         check('password', 'el password es obligatorio').not().isEmpty(),
-        valdarCampos
+        validarCampos
     ],
     login
 );
@@ -25,7 +25,7 @@ router.post(
         check('correo').custom(existeEmail),
         check('role').custom(esRoleValido),
         check('phone', 'el telefono debe tener 8 numeros').isLength({min: 8, max:8}),
-        valdarCampos
+        validarCampos
     ],
     register
 )
