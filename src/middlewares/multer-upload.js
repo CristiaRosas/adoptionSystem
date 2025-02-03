@@ -11,7 +11,7 @@ const createMulterConfig = (destinationPath) => {
         storage: multer.diskStorage({
             destination: (req, file, cb) => {
                 const fullPath = join(CURRENT_DIR, destinationPath);
-                req.filePath = fullPath; // Set the filePath on the request object
+                req.filePath = fullPath; 
                 cb(null, fullPath);
             },
             filename: (req, file, cb) => {
