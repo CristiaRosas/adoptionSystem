@@ -1,0 +1,62 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Auth",
+    "collectionId": "b4e3c929-40e8-446b-80e0-4e5f4ad6f2d5",
+    "dateExported": "2025-02-05T22:46:36.182Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cb4d467a-1881-4361-9175-8620fc8748b1",
+            "colId": "b4e3c929-40e8-446b-80e0-4e5f4ad6f2d5",
+            "containerId": "",
+            "name": "Register",
+            "url": "http://localhost:3001/adoptionSystem/v1/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2025-02-05T20:15:23.964Z",
+            "modified": "2025-02-05T22:32:22.858Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Mandril\",\n  \"surname\": \"Mono\",\n  \"username\": \"animal\",\n  \"email\": \"mandril@gmail.com\",\n  \"password\": \"12345678\",\n  \"profilePicture\": \"\",\n  \"phone\": \"12345678\",\n  \"role\": \"ADMIN_ROLE\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "39894523-cec6-4909-b2ee-f15043d6d7ee",
+            "colId": "b4e3c929-40e8-446b-80e0-4e5f4ad6f2d5",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:3002/adoptionSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2025-02-05T20:25:05.816Z",
+            "modified": "2025-02-05T22:41:40.554Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"jalvarez@kinal.edu.gt\",\n  \"password\": \"12345666\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "2e9f6530-3824-4b75-ab96-289a00d625e1",
+            "colId": "b4e3c929-40e8-446b-80e0-4e5f4ad6f2d5",
+            "containerId": "",
+            "name": "Login Copy",
+            "url": "http://localhost:3002/adoptionSystem/v1/auth/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-02-05T22:34:32.525Z",
+            "modified": "2025-02-05T22:42:04.228Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"mandril@gmail.com\",\n  \"password\": \"12345678\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "L1qgP8_DJp1CUI_3OoxvgUZM6uJsK-G5nCuuGiJIueeu8qSUxKG88lCHmCRl9i3Up_y7knP_MYTmGwzdj-nf0Q"
+}

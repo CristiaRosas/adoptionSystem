@@ -39,4 +39,5 @@ export const validarJWT = async (req, res, next) => {
             msg: "Token no valido"
         })
     }
+    next();
 }
