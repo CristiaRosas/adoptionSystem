@@ -1,9 +1,10 @@
-import { response, request } from "express"
-import { hash, verify } from 'argon2';
+import { response, request } from "express";
+import { hash } from "argon2"
 import User from './user.model.js'
 
-export const getUsers = async (req = request, res = response) => {
+export const getUsers = async (req = request, res = response) =>{
     try {
+        
         const { limite = 10, desde = 0} = req.query;
         const query = { estado: true};
 
@@ -22,7 +23,7 @@ export const getUsers = async (req = request, res = response) => {
 
     } catch (error) {
         res.status(500).json({
-            succes: false,
+            success: false,
             msg: 'Error al obtener usuarios',
             error
         })
@@ -31,6 +32,7 @@ export const getUsers = async (req = request, res = response) => {
 
 export const getUserById = async (req, res) => {
     try {
+        
         const { id } = req.params;
 
         const user = await User.findById(id);
@@ -46,10 +48,11 @@ export const getUserById = async (req, res) => {
             success: true,
             user
         })
+
     } catch (error) {
         res.status(500).json({
             success: false,
-            msg: 'Error al obtener usuario',
+            msg: 'Error al obtener Usuario',
             error
         })
     }
@@ -58,45 +61,45 @@ export const getUserById = async (req, res) => {
 export const updateUser = async (req, res = response) => {
     try {
         
-        const { id } = req.params;
-        const { _id, password, email, ...data } = req.body;
+        const { id } = req.params
+        const { _id, password, email, ...data} = req.body;
 
-        if(password) {
+        if(password){
             data.password = await hash(password)
         }
 
         const user = await User.findByIdAndUpdate(id, data, {new: true});
 
         res.status(200).json({
-            succes: true,
-            msg: 'Usuario Actualizado',
+            success: true,
+            msg: 'Usuario actualizado',
             user
         })
 
     } catch (error) {
         res.status(500).json({
             success: false,
-            msg: 'Error al actualizar usuario',
+            msg: 'Error al actualizar user',
             error
         })
     }
 }
 
-export const deleteUser = async (req, res) => {
+export const deleteUser = async (req, res) =>{
     try {
         
         const { id } = req.params;
 
-        const user = await User.findByIdAndUpdate(id, { estado: false }, {new: true});
+        const user = await User.findByIdAndUpdate(id, { estado: false}, { new: true });
 
-        const authenticatedUser = req.user;
+        const autheticatedUser = req.user;
 
         res.status(200).json({
             success: true,
             msg: 'Usuario desactivado',
             user,
-            authenticatedUser
-        })
+            autheticatedUser
+        });
 
     } catch (error) {
         res.status(500).json({

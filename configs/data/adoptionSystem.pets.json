@@ -1,0 +1,19 @@
+[{
+  "_id": {
+    "$oid": "67a42b9df02496bd2cbd525a"
+  },
+  "name": "Rocky",
+  "description": "Raza pitbul",
+  "age": 2,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67a41ddbf02496bd2cbd5240"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-06T03:25:17.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-06T03:31:42.001Z"
+  }
+}]

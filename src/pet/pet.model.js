@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
- 
+
 const PetSchema = Schema({
     name: {
         type: String,
@@ -27,9 +27,9 @@ const PetSchema = Schema({
         type: Boolean,
         default: true
     }
-},{
+}, {
     timestamps: true,
     versionKey: false
 });
- 
+
 export default model('Pet', PetSchema);

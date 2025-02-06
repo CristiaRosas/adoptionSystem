@@ -1,40 +1,80 @@
 [{
   "_id": {
-    "$oid": "67a3c90f0450018164032f86"
+    "$oid": "67a41ddbf02496bd2cbd5240"
   },
-  "name": "jonas",
-  "surname": "jonas",
-  "username": "jotanan",
-  "email": "jalvarez@kinal.edu.gt",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$eXpi6flaGacY9c5RFmXHPQ$zQeI64xZH6c5CFnfH2vlqdIe2enTh5j01n4JQMl5Obs",
-  "profilePicture": null,
-  "phone": "22223343",
-  "role": "USER_ROLE",
-  "estado": false,
-  "createdAt": {
-    "$date": "2025-02-05T20:24:47.113Z"
-  },
-  "updatedAt": {
-    "$date": "2025-02-05T22:35:52.447Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "67a3e6f6dae5738aecf2a07e"
-  },
-  "name": "Mandril",
-  "surname": "Mono",
-  "username": "animal",
-  "email": "mandril@gmail.com",
-  "password": "$argon2id$v=19$m=65536,t=3,p=4$i/CwiyU7zDd7Pb1cI6pjew$GrPPOP/kSoRKt9Pc5l6AL4eHb90duCsGYgDGLpDnyCU",
+  "name": " Cristian",
+  "surname": "Rosas",
+  "username": "Crosas",
+  "email": "crosas@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$e/cy79c1a93RDLwcxZN48Q$wamAGallrQotySsaEQ78RuAyt1QBr0rx9DBcVSN+Ljo",
   "profilePicture": null,
   "phone": "12345678",
   "role": "ADMIN_ROLE",
   "estado": true,
   "createdAt": {
-    "$date": "2025-02-05T22:32:22.836Z"
+    "$date": "2025-02-06T02:26:35.664Z"
   },
   "updatedAt": {
-    "$date": "2025-02-05T22:32:22.836Z"
+    "$date": "2025-02-06T02:26:35.664Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a41e0df02496bd2cbd5244"
+  },
+  "name": " Jonathan",
+  "surname": "Alvarez",
+  "username": "jonas",
+  "email": "jonas@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$VTQUNH/BQjJYEIc079ZWhA$i5XKZk/pAgYqpLd0ezsJ1g2aXWYp9IRe84QaiPzhy2Q",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "estado": false,
+  "createdAt": {
+    "$date": "2025-02-06T02:27:25.456Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-06T02:32:28.583Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a41f8af02496bd2cbd5250"
+  },
+  "name": " Andril",
+  "surname": "Rolando",
+  "username": "mandril",
+  "email": "mandril@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$KhiUiypvfcSz7mqLR9WBbw$OTqQjnVd560AhAAPlo78zPG/QmB+b5hWyPwd30IIBuc",
+  "profilePicture": null,
+  "phone": "12345678",
+  "role": "USER_ROLE",
+  "estado": true,
+  "createdAt": {
+    "$date": "2025-02-06T02:33:46.661Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-06T02:33:46.661Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67a42ee4f02496bd2cbd5273"
+  },
+  "name": "Peralta",
+  "surname": "Matinez",
+  "username": "pepa",
+  "email": "pepa@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$TrI6AhrSs9g7dWNnRWa6uA$Lefyz5+3K0X4NScBkobktT7FYqYRSkAoY9VwmSTDNM0",
+  "profilePicture": null,
+  "phone": "87654321",
+  "role": "USER_ROLE",
+  "estado": false,
+  "createdAt": {
+    "$date": "2025-02-06T03:39:16.424Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-06T03:39:53.100Z"
   }
 }]
