@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "Pet",
     "collectionId": "2955caab-ea3e-4666-908c-fec30e4ebee9",
-    "dateExported": "2025-02-06T03:50:16.992Z",
+    "dateExported": "2025-02-16T07:22:16.728Z",
     "version": "1.2",
     "folders": [],
     "requests": [
@@ -73,7 +73,29 @@
                     "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E0MWRkYmYwMjQ5NmJkMmNiZDUyNDAiLCJpYXQiOjE3Mzg4MTI2OTAsImV4cCI6MTczODgxNjI5MH0.TcoDrNBHvx8zzOp4ZP2wvo11Xji5BZOk6cvc7QFJd3A"
                 }
             ]
+        },
+        {
+            "_id": "30aaafcc-42c5-42c3-ba74-75070d8c7faa",
+            "colId": "2955caab-ea3e-4666-908c-fec30e4ebee9",
+            "containerId": "",
+            "name": "updatePet",
+            "url": "http://localhost:3000/adoptionSystem/v1/pets/67a42b9df02496bd2cbd525a",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-02-16T06:22:07.009Z",
+            "modified": "2025-02-16T06:25:01.970Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E0MWRkYmYwMjQ5NmJkMmNiZDUyNDAiLCJpYXQiOjE3Mzk2ODY3MzQsImV4cCI6MTczOTY5MDMzNH0.vaTpGfNxmrDmbRlkHtq9NbGQVxmVOIcDRwsLATHkGr8"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Rocky\",\n   \"description\": \"Raza pitbul\",\n    \"age\": 2,\n    \"type\": \"perro\",\n    \"email\": \"crosas@gmail.com\"\n    \n}",
+                "form": []
+            }
         }
     ],
-    "ref": "rdfSOhVdcyBbAGHBjvdMdnW5jSZiFXDTES292inUJQfJY99-2fh8VnuXRRYWydOdp2z0J74iBKpODqBERdkENA"
+    "ref": "rdfSOhVdcyBbAGHBjvdMdlXOoRuKh7ritqLUmqxOfBGFVBY9hbBRL-1LiEOPyuBE20rvf_8rkLWy0BJEINU5jQ"
 }

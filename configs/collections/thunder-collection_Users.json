@@ -1,33 +1,33 @@
 {
     "clientName": "Thunder Client",
     "collectionName": "Users",
-    "collectionId": "23a04877-1768-4552-b40d-922ddd5cc3c6",
-    "dateExported": "2025-02-06T03:58:40.062Z",
+    "collectionId": "35767154-c5f2-4bc0-81fa-5492f78d650a",
+    "dateExported": "2025-02-16T07:25:12.360Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "d5ac088c-7197-4b1f-84e2-5a842bccb2b8",
-            "colId": "23a04877-1768-4552-b40d-922ddd5cc3c6",
+            "_id": "a1d00c1b-8281-4318-9107-ceed09e600a6",
+            "colId": "35767154-c5f2-4bc0-81fa-5492f78d650a",
             "containerId": "",
             "name": "getUsers",
             "url": "http://localhost:3000/adoptionSystem/v1/users/",
             "method": "GET",
             "sortNum": 10000,
-            "created": "2025-02-06T03:49:35.595Z",
-            "modified": "2025-02-06T03:52:06.819Z",
+            "created": "2025-02-06T03:59:08.374Z",
+            "modified": "2025-02-06T03:59:08.374Z",
             "headers": []
         },
         {
-            "_id": "db8399d5-badf-463f-b469-c65ea8bb9252",
-            "colId": "23a04877-1768-4552-b40d-922ddd5cc3c6",
+            "_id": "4e8766a3-edb7-478f-a56a-da95480718f7",
+            "colId": "35767154-c5f2-4bc0-81fa-5492f78d650a",
             "containerId": "",
             "name": "deleteUser",
             "url": "http://localhost:3000/adoptionSystem/v1/users/67a41f8af02496bd2cbd5250",
             "method": "DELETE",
             "sortNum": 20000,
-            "created": "2025-02-06T03:50:54.173Z",
-            "modified": "2025-02-06T03:52:46.709Z",
+            "created": "2025-02-06T03:59:08.375Z",
+            "modified": "2025-02-06T03:59:08.375Z",
             "headers": [
                 {
                     "name": "x-token",
@@ -36,34 +36,51 @@
             ]
         },
         {
-            "_id": "7aa22ea8-1dd4-4ca1-9832-41eb1aa6db81",
-            "colId": "23a04877-1768-4552-b40d-922ddd5cc3c6",
+            "_id": "38b00bbf-c4ed-46bf-b01b-85a135eeb135",
+            "colId": "35767154-c5f2-4bc0-81fa-5492f78d650a",
             "containerId": "",
             "name": "getUserById",
             "url": "http://localhost:3000/adoptionSystem/v1/users/findUser/67a41ddbf02496bd2cbd5240",
             "method": "GET",
             "sortNum": 30000,
-            "created": "2025-02-06T03:53:30.905Z",
-            "modified": "2025-02-06T03:55:30.676Z",
+            "created": "2025-02-06T03:59:08.376Z",
+            "modified": "2025-02-06T03:59:08.376Z",
             "headers": []
         },
         {
-            "_id": "d4ca79e2-c61f-4e5e-ac81-b42a644f8cf5",
-            "colId": "23a04877-1768-4552-b40d-922ddd5cc3c6",
+            "_id": "3ca60d68-97eb-4a6c-9abf-141a5f952f88",
+            "colId": "35767154-c5f2-4bc0-81fa-5492f78d650a",
             "containerId": "",
             "name": "UpdateUser",
             "url": "http://localhost:3000/adoptionSystem/v1/users/67a41f8af02496bd2cbd5250",
             "method": "PUT",
             "sortNum": 40000,
-            "created": "2025-02-06T03:56:46.885Z",
-            "modified": "2025-02-06T03:58:05.560Z",
+            "created": "2025-02-06T03:59:08.377Z",
+            "modified": "2025-02-06T03:59:08.377Z",
             "headers": [],
             "body": {
                 "type": "json",
                 "raw": "{\n  \"name\": \" Andril\",\n    \"surname\": \"Aguilar\",\n    \"username\": \"mandril\",\n    \"email\": \"mandril@gmail.com\",\n    \"profilePicture\": null,\n    \"phone\": \"12345678\",\n    \"role\": \"USER_ROLE\"\n}",
                 "form": []
             }
+        },
+        {
+            "_id": "1be4ae6a-5a70-41ed-85d8-9df9ede5d8ef",
+            "colId": "35767154-c5f2-4bc0-81fa-5492f78d650a",
+            "containerId": "",
+            "name": "updatePasword",
+            "url": "http://localhost:3000/adoptionSystem/v1/users/actualizarContrasena/67a41e0df02496bd2cbd5244",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2025-02-16T06:29:25.908Z",
+            "modified": "2025-02-16T06:38:55.063Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"password\": \"12345678\"\n}",
+                "form": []
+            }
         }
     ],
-    "ref": "1nL6oAWz-h0ody6Pgxv4SpvH0lFroDDCjNvbgidNU829ZDtX93BKvAiQUAjvCia8wq5htEOMFIqlWylKv60LBA"
+    "ref": "VrjM7mKXWxCfN-msE6y2n5bLl1ZxZJrPyFwzkxkBdGDUAIU-7x4Vu4uTmaE5fz4Q6I5GxycQL55hs56-MlNltA"
 }

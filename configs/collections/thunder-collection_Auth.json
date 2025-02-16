@@ -1,21 +1,21 @@
 {
     "clientName": "Thunder Client",
     "collectionName": "Auth",
-    "collectionId": "87844a3e-5c76-44a2-990b-106ab94a05dd",
-    "dateExported": "2025-02-06T03:44:36.466Z",
+    "collectionId": "9eed0056-2340-481b-a3bc-4506c515b27e",
+    "dateExported": "2025-02-16T07:21:33.837Z",
     "version": "1.2",
     "folders": [],
     "requests": [
         {
-            "_id": "791569e8-7a71-448b-9692-9239f9a6e272",
-            "colId": "87844a3e-5c76-44a2-990b-106ab94a05dd",
+            "_id": "c64f2af2-31d9-4b68-aeb1-4b52b9385510",
+            "colId": "9eed0056-2340-481b-a3bc-4506c515b27e",
             "containerId": "",
             "name": "Register",
             "url": "http://localhost:3000/adoptionSystem/v1/auth/register",
             "method": "POST",
             "sortNum": 10000,
-            "created": "2025-02-06T01:35:03.094Z",
-            "modified": "2025-02-06T03:39:16.437Z",
+            "created": "2025-02-11T04:02:01.419Z",
+            "modified": "2025-02-11T04:02:01.419Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -24,22 +24,44 @@
             }
         },
         {
-            "_id": "c3015347-54b0-4642-a2b9-996d1c6c8472",
-            "colId": "87844a3e-5c76-44a2-990b-106ab94a05dd",
+            "_id": "194d14c7-008e-4adc-897a-cacd26c2f2e1",
+            "colId": "9eed0056-2340-481b-a3bc-4506c515b27e",
             "containerId": "",
             "name": "Login",
             "url": "http://localhost:3000/adoptionSystem/v1/auth/login",
             "method": "POST",
             "sortNum": 20000,
-            "created": "2025-02-06T01:38:10.655Z",
-            "modified": "2025-02-06T03:39:44.390Z",
+            "created": "2025-02-11T04:02:01.421Z",
+            "modified": "2025-02-16T06:39:46.966Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"email\": \"crosas@gmail.com\",\n   \"password\": \"12345678\"\n}",
+                "raw": "{\n  \"email\": \"jonas@gmail.com\",\n   \"password\": \"12345678\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "14501c42-5ef1-49d8-b6dc-142bd225895d",
+            "colId": "9eed0056-2340-481b-a3bc-4506c515b27e",
+            "containerId": "",
+            "name": "crearCita",
+            "url": "http://localhost:3000/adoptionSystem/v1/dates",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2025-02-16T06:47:12.527Z",
+            "modified": "2025-02-16T07:10:46.598Z",
+            "headers": [
+                {
+                    "name": "x-token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2E0MWUwZGYwMjQ5NmJkMmNiZDUyNDQiLCJpYXQiOjE3Mzk2ODg1ODgsImV4cCI6MTczOTY5MjE4OH0.tsnta1-BmhAGJbwRvgSqYOVj0dZxK5qtlc4KOq-lkiM"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": " {\r\n    \"hora\": \"12:15\",\r\n    \"fecha\": \"14/02/2025\",\r\n    \"motivo\": \"correcion de notas\",\r\n    \"email\": \"jonas@gmail.com\"\r\n }  \r\n",
                 "form": []
             }
         }
     ],
-    "ref": "vRsBPwCQ11vDI4sfa9TnJNwRqWxZztnPx0Sk-xQBKaPqDbRCfPItQjIgF2phqwgkm92C7K1okH6iHnHf7mRpfQ"
+    "ref": "hK6VqJO3gOCAEfLcY2hiuj8NL8gv1Uq3-jT1mrVUylzek-zIPnB24vk_abOT2th-N3AFoX7rZ_I7U1qcbFoFzg"
 }
