@@ -6,6 +6,8 @@ import { validarJWT } from "../middlewares/validar-jwt.js"
 
 const router = Router();
 
+router.get('/pets', getPets);
+
 router.post(
     "/",
     [

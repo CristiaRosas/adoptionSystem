@@ -1,152 +1,64 @@
+import User from '../users/user.model.js';
+import Pet from './pet.model.js';
 
-import User from '../users/user.model.js'
-import Pet from './pet.model.js'
-
-export const savePet = async (req, res) =>{
+export const savePet = async (req, res) => {
     try {
-        
-        const data = req.body;
-        const user = await User.findOne({ email: data.email });
+        const { email, ...data } = req.body;
+        const user = await User.findOne({ email });
 
-        if(!user){
-            return res.status(404).json({
-                success: false,
-                message: 'Propietario no encontrado'
-            })
-        }
+        if (!user) return res.status(404).json({ success: false, message: 'Propietario no encontrado' });
 
-        const pet = new Pet({
-            ...data,
-            keeper: user._id
-        });
+        const pet = await Pet.create({ ...data, keeper: user._id });
 
-        await pet.save();
-
-        res.status(200).json({
-            success: true,
-            pet
-        })
-
+        res.status(200).json({ success: true, pet });
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: 'Error al guardar mascota',
-            error
-        })
+        res.status(500).json({ success: false, message: 'Error al guardar mascota', error });
     }
-}
+};
 
-export const getPets = async (req, res) =>{
-    
-    const { limite = 10, desde = 0} = req.query;
-    const query = { status: true};
-
+export const getPets = async (req, res) => {
     try {
-        
-        const pets = await Pet.find(query)
-            .skip(Number(desde))
-            .limit(Number(limite));
+        const { limite = 10, desde = 0 } = req.query;
+        const query = { status: true };
 
-        const petsWithOwnerNames = await Promise.all(pets.map(async (pet) =>{
-            const owner = await User.findById(pet.keeper);
-            return {
-                ...pet.toObject(),
-                keeper: owner ? owner.nombre : "Propietario no encontrado"
-            }
-        }));
+        const [total, pets] = await Promise.all([
+            Pet.countDocuments(query),
+            Pet.find(query).skip(Number(desde)).limit(Number(limite)).populate('keeper', 'nombre')
+        ]);
 
-        const total = await Pet.countDocuments(query);
-
-        res.status(200).json({
-            success: true,
-            total,
-            pets: petsWithOwnerNames
-        })
-        
+        res.status(200).json({ success: true, total, pets });
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: 'Error al obtener mascotas',
-            error
-        })
+        res.status(500).json({ success: false, message: 'Error al obtener mascotas', error });
     }
-}
+};
 
 export const searchPet = async (req, res) => {
-    
-    const { id } = req.params;
-
     try {
+        const pet = await Pet.findById(req.params.id).populate('keeper', 'nombre');
 
-        const pet = await Pet.findById(id);
+        if (!pet) return res.status(404).json({ success: false, message: 'Mascota no encontrada' });
 
-        if(!pet){
-            return res.status(404).json({
-                success: false,
-                message: 'Mascota no encontrada'
-            })
-        }
-
-        const owner = await User.findById(pet.keeper);
-
-        res.status(200).json({
-            success: true,
-            pet: {
-                ...pet.toObject(),
-                keeper: owner ? owner.nombre : "Propietario no encontrado"
-            }
-        })
-
+        res.status(200).json({ success: true, pet });
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: 'Error al buscar mascota',
-            error
-        })
+        res.status(500).json({ success: false, message: 'Error al buscar mascota', error });
     }
-}
+};
 
 export const deletePet = async (req, res) => {
-
-    const { id } = req.params;
-
     try {
-        
-        await Pet.findByIdAndUpdate(id, { status: false});
-
-        res.status(200).json({
-            success: true,
-            message: 'Pet eliminada exitosamente'
-        })
-
+        await Pet.findByIdAndUpdate(req.params.id, { status: false });
+        res.status(200).json({ success: true, message: 'Mascota eliminada exitosamente' });
     } catch (error) {
-        res.status(500).json({
-            success: false,
-            message: 'Error al eliminar mascota',
-            error
-        })
+        res.status(500).json({ success: false, message: 'Error al eliminar mascota', error });
     }
+};
 
-}
-
-export const updatePet = async (req, res  = response) => {
+export const updatePet = async (req, res) => {
     try {
-        const {id} = req.params;
-        const {_id, ...data} = req.body;
+        const pet = await Pet.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
-        const pet = await Pet.findByIdAndUpdate(id, data, {new: true});
-
-        res.status(200).json({
-            succes: true,
-            msj: 'macota actualizada con exito!',
-            pet
-        })
-
+        res.status(200).json({ success: true, message: 'Mascota actualizada con éxito!', pet });
     } catch (error) {
-        res.status(500).json({
-            succes: false,
-            msj: "Error al actualizar la mascota!",
-            error
-        })
+        res.status(500).json({ success: false, message: 'Error al actualizar la mascota!', error });
     }
-}
+};

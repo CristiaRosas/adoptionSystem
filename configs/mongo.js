@@ -5,29 +5,29 @@ import mongoose from "mongoose";
 export const dbConnection = async () => {
     try{
         mongoose.connection.on('error', ()=>{
-            console.log('MongoDB | Could not be connected to MongoDB');
+            console.log('MongoDB | No se pudo conectar a MongoDB');
             mongoose.disconnect();
         });
-        mongoose.connection.on('connecting', ()=>{
-            console.log('MongoDB | Try connecting');
+        mongoose.connection.on('Conectando', ()=>{
+            console.log('MongoDB | Intenta conectarte');
         });
         mongoose.connection.on('connected', ()=>{
-            console.log('MongoDB | connected to MongoDB');
+            console.log('MongoDB | Conectado a MongoDB');
         });
         mongoose.connection.on('open', ()=>{
-            console.log('MongoDB | connected to database');
+            console.log('MongoDB | Conectado a database');
         });
         mongoose.connection.on('reconnected', ()=>{
-            console.log('MongoDB | reconnected to MongoDB');
+            console.log('MongoDB | reconectado a MongoDB');
         });
         mongoose.connection.on('disconnected', ()=>{
-            console.log('MongoDB | disconnected');
+            console.log('MongoDB | desconectado');
         });
         mongoose.connect(process.env.URI_MONGO, {
             serverSelectionTimeoutMS: 5000,
             maxPoolSize: 50,
         });
     }catch(error){
-        console.log('Database connection failed', error);
+        console.log('La conexión a la base de datos falló', error);
     }
 }

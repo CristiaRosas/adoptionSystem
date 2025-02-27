@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { check } from "express-validator";
-import { saveCita} from "./date.controller.js";
+import { saveCita, getDates} from "./date.controller.js";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 
@@ -10,11 +10,12 @@ router.post(
     "/",
     [
         validarJWT,
-        check('email', 'Este no es un correo valido').not().isEmpty(),
+        check('email', 'El correo es invalido').not().isEmpty(),
         validarCampos
     ],
     saveCita
 )
 
+router.get ("/", getDates)
 
 export default router;

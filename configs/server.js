@@ -46,8 +46,8 @@ export const initServer = async () => {
         conectarDB();
         routes(app);
         app.listen(port);
-        console.log(`Server running on port: ${port}`);
+        console.log(`Servidor ejecutándose en el puerto: ${port}`);
     } catch (err) {
-        console.log(`Server init failed: ${err}`);
+        console.log(`Error al iniciar el servidor: ${err}`);
     }
 }

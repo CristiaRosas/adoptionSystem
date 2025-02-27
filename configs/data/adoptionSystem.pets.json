@@ -1,19 +1,38 @@
 [{
   "_id": {
-    "$oid": "67a42b9df02496bd2cbd525a"
+    "$oid": "67bfdc518ee38ee1c6848609"
   },
   "name": "Rocky",
   "description": "Raza pitbul",
   "age": 2,
   "type": "PERRO",
   "keeper": {
-    "$oid": "67a41ddbf02496bd2cbd5240"
+    "$oid": "67bfcd9f76e28e2f2059472d"
   },
   "status": true,
   "createdAt": {
-    "$date": "2025-02-06T03:25:17.468Z"
+    "$date": "2025-02-27T03:30:25.364Z"
   },
   "updatedAt": {
-    "$date": "2025-02-06T03:31:42.001Z"
+    "$date": "2025-02-27T03:30:25.364Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67bfdd788abf7015cdec1b78"
+  },
+  "name": "Canelo",
+  "description": "Raza desconocida",
+  "age": 4,
+  "type": "PERRO",
+  "keeper": {
+    "$oid": "67bfcdff76e28e2f20594735"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-02-27T03:35:20.060Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-27T03:52:58.017Z"
   }
 }]

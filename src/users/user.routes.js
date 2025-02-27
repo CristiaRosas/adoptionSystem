@@ -45,7 +45,7 @@ router.delete(
 )
 
 router.put(
-    "/actualizarContrasena/:id",
+    "/updatePassword/:id",
     [
         check("id", "No es un Id válido").isMongoId(),
         check("id").custom(existeUsuarioById),

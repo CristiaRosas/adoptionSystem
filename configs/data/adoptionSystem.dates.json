@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "67bfe47b61043b5f4b11589c"
+  },
+  "hora": "10:00",
+  "fecha": "15/10/2006",
+  "motivo": "groming",
+  "keeper": {
+    "$oid": "67bfcdff76e28e2f20594735"
+  },
+  "status": true
+}]

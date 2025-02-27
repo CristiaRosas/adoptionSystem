@@ -4,13 +4,13 @@ const UserSchema = Schema(
     {
         name: {
             type: String,
-            required: [true, "Name is required"],
-            maxLength: [25, "Cant be overcome 25 characters"]
+            required: [true, "El nombre es obligatorio"],
+            maxLength: [25, "No se pueden superar los 25 caracteres."]
         },
         surname: {
             type: String,
-            required: [true, "Surname is required"],
-            maxLength: [25, "Cant be overcome 25 characters"]
+            required: [true, "El apellido es obligatorio"],
+            maxLength: [25, "No se pueden superar los 25 caracteres."]
         },
         username: {
             type: String,
@@ -18,12 +18,12 @@ const UserSchema = Schema(
         },
         email: {
             type: String,
-            required: [true, "Email is required"],
+            required: [true, "El correo es obligatorio"],
             unique: true
         },
         password: {
             type: String,
-            required: [true, "Password is required"],
+            required: [true, "La contraseña es obligatoria"],
             minLength: 8
         },
         profilePicture: {

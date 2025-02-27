@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "17c4adfc-652d-47d9-ac3f-397d74384499",
+		"name": "MascotasAdoptionSystem",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37413747"
+	},
+	"item": [
+		{
+			"name": "NuevaMascota",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmY2VlZDc2ZTI4ZTJmMjA1OTQ3NDciLCJpYXQiOjE3NDA2MjcwMTEsImV4cCI6MTc0MDYzMDYxMX0.HknAzTrP4qttwb2O4nex6xf18_uvXM25FZLGdWTRUbg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Canelo\",\r\n   \"description\": \"Raza desconocida\",\r\n    \"age\": 4,\r\n    \"type\": \"perro\",\r\n    \"email\": \"mandril@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarMascotaPorId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67a42b9df02496bd2cbd525a?x-token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmY2VlZDc2ZTI4ZTJmMjA1OTQ3NDciLCJpYXQiOjE3NDA2MjgyNDIsImV4cCI6MTc0MDYzMTg0Mn0.4PwwszMV7-pvBKJr0J5W0st6N9yAKJgPaahBb8L7RBo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67a42b9df02496bd2cbd525a"
+					],
+					"query": [
+						{
+							"key": "x-token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmY2VlZDc2ZTI4ZTJmMjA1OTQ3NDciLCJpYXQiOjE3NDA2MjgyNDIsImV4cCI6MTc0MDYzMTg0Mn0.4PwwszMV7-pvBKJr0J5W0st6N9yAKJgPaahBb8L7RBo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ObtenerMascotas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarMascota",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmY2VlZDc2ZTI4ZTJmMjA1OTQ3NDciLCJpYXQiOjE3NDA2MjgyNDIsImV4cCI6MTc0MDYzMTg0Mn0.4PwwszMV7-pvBKJr0J5W0st6N9yAKJgPaahBb8L7RBo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Rocky\",\r\n   \"description\": \"Raza pitbul\",\r\n    \"age\": 2,\r\n    \"type\": \"perro color negro\",\r\n    \"email\": \"crosas@gmail.com\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67bfdd788abf7015cdec1b78",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67bfdd788abf7015cdec1b78"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarMascota",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2JmY2VlZDc2ZTI4ZTJmMjA1OTQ3NDciLCJpYXQiOjE3NDA2MjgyNDIsImV4cCI6MTc0MDYzMTg0Mn0.4PwwszMV7-pvBKJr0J5W0st6N9yAKJgPaahBb8L7RBo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Rocky\",\r\n   \"description\": \"Raza pitbul\",\r\n    \"age\": 2,\r\n    \"type\": \"perro de color negro\",\r\n    \"email\": \"crosas@gmail.com\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/adoptionSystem/v1/pets/67a42b9df02496bd2cbd525a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"adoptionSystem",
+						"v1",
+						"pets",
+						"67a42b9df02496bd2cbd525a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
