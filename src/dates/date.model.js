@@ -13,7 +13,7 @@ const DateSchema = Schema ({
         type: String,
         required: true
     },
-    keeper: {
+    relacion: {
         type: Schema.Types.ObjectId,
         ref: 'user',
         required: true

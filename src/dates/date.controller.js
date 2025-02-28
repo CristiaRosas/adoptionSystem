@@ -15,10 +15,13 @@ export const saveCita = async (req, res) => {
         }
 
         const cita = new Date({
-            ...data,
-            keeper: user._id
-        });
-
+            hora: data.hora,
+            fecha: data.fecha,
+            motivo: data.motivo,
+            relacion: user._id,
+            status: data.status, 
+          });
+          
         const savedCita = await cita.save();
 
         return res.status(200).json({
